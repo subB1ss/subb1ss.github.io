@@ -11,6 +11,8 @@ hide:
 
 文章使用Markdown编写，使用Material for MkDocs渲染成网页
 
+> 你可能需要完全访问github的能力来达到最好体验
+
 ## AboutMe
 重度互联网依赖症患者
 
