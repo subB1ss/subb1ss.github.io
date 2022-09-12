@@ -23,8 +23,6 @@ theme:
         name: 关灯
       primary: cyan
       accent: cyan
-
-    # 深色主题
     - scheme: slate
       toggle:
         icon: material/lightbulb-outline
@@ -45,7 +43,7 @@ extra:
     - icon: fontawesome/brands/telegram
       link: https://t.me/ra1nma1n
 plugins:
-   - glightbox:
+    - glightbox:
        touchNavigation: true
        loop: false
        effect: zoom
@@ -53,6 +51,9 @@ plugins:
        height: auto
        zoomable: true
        draggable: true
+    - search:
+        lang:
+          - en
 markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
