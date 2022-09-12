@@ -44,6 +44,15 @@ extra:
   social:
     - icon: fontawesome/brands/telegram
       link: https://t.me/ra1nma1n
+plugins:
+   - glightbox:
+       touchNavigation: true
+       loop: false
+       effect: zoom
+       width: 100%
+       height: auto
+       zoomable: true
+       draggable: true
 markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
@@ -56,9 +65,13 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-
+  - attr_list
+  - md_in_html
 nav:
   - 学习笔记:
     - notes/index.md
     - linux文件与权限: notes/09-Sep-22.md
     - linux文件结构与FHS: notes/12-Sep-22.md
+  - 上网冲浪:
+    - surf-the-internet/index.md
+    - 代理，互联网的第一步: surf-the-internet/HowToProxy.md
