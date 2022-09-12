@@ -20,5 +20,10 @@ hide:
 
 你可以通过Telegram联系我
 
+## Recently
+[linux文件结构与FHS](notes/12-Sep-22.md)
+
+[linux文件与权限](notes/09-Sep-22/)
+
 ## Todo:
 - [ ] 写一个简单的多平台代理介绍

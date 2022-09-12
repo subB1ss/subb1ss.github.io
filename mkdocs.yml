@@ -2,6 +2,20 @@ site_name: 我的文档
 theme:
   name: material
   # custom_dir: overrides
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
   palette: 
     - scheme: default
       toggle:
@@ -39,8 +53,12 @@ markdown_extensions:
       #     - overrides/.icons
   - pymdownx.tasklist:
       custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
 nav:
   - 学习笔记:
     - notes/index.md
     - linux文件与权限: notes/09-Sep-22.md
+    - linux文件结构与FHS: notes/12-Sep-22.md
