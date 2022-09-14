@@ -21,11 +21,13 @@ hide:
 你可以通过Telegram联系我
 
 ## Recently
+
+[常用命令查漏补缺](notes/14-Sep-22/)
+
 [代理，互联网的第一步](surf-the-internet/HowToProxy.md)
 
 [linux文件结构与FHS](notes/12-Sep-22.md)
 
-[linux文件与权限](notes/09-Sep-22/)
-
 ## Todo:
 - [x] 写一个简单的多平台代理介绍
+- [ ] 添加评论功能
