@@ -22,11 +22,12 @@ hide:
 
 ## Recently
 
+[开始使用linux啦](surf-the-internet/StartWithLinux.md)
+
 [常用命令查漏补缺](notes/14-Sep-22/)
 
 [代理，互联网的第一步](surf-the-internet/HowToProxy.md)
 
-[linux文件结构与FHS](notes/12-Sep-22.md)
 
 ## Todo:
 - [x] 写一个简单的多平台代理介绍

@@ -68,12 +68,19 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - md_in_html
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
 nav:
   - 学习笔记:
     - notes/index.md
     - linux文件与权限: notes/09-Sep-22.md
     - linux文件结构与FHS: notes/12-Sep-22.md
     - 常用命令查漏补缺: notes/14-Sep-22.md
+    - linux文件系统与磁盘(WIP): notes/15-Sep-22.md
   - 上网冲浪:
     - surf-the-internet/index.md
     - 代理，互联网的第一步: surf-the-internet/HowToProxy.md
+    - 开始使用linux啦: surf-the-internet/StartWithLinux.md
