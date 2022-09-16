@@ -80,4 +80,3 @@
 
     还有适用于Android平台的clashforandroid，直接在playstore或者github上搜索就可以下载，配置同样简单，相信你一定能轻松使用
 
-> write in 12-Sep-22
