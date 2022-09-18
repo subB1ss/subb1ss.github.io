@@ -22,12 +22,11 @@ hide:
 
 ## Recently
 
+[ubuntu美化及踩坑](surf-the-internet/GnomeShellStuffs.md)
+
 [开始使用linux啦](surf-the-internet/StartWithLinux.md)
 
 [常用命令查漏补缺](notes/14-Sep-22/)
-
-[代理，互联网的第一步](surf-the-internet/HowToProxy.md)
-
 
 ## Todo:
 - [x] 写一个简单的多平台代理介绍
