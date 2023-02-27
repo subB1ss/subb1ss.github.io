@@ -4,13 +4,13 @@
     font-style: normal;
 }
 @font-face {
-    font-family: "霞鹜文楷Mono";
-    src: url(../fonts/LXGWWenKaiMonoLite-Regular.ttf);
+    font-family: "Consolas";
+    src: url(../fonts/YaHei.Consolas.1.12.ttf);
     font-style: normal;
 }
 :root {
     --md-text-font: "霞鹜文楷";
-    --md-code-font: "霞鹜文楷Mono"
+    --md-code-font: "Consolas"
 }
 .md-footer__inner.md-grid {
     display: none
