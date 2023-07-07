@@ -24,11 +24,13 @@ hide:
 
 ## Recently
 
+[CSAPP review](notes/07-Jul-23.md)
+
 [修改Telegram字体](surf-the-internet/TelegramFont.md)
 
 [ubuntu美化及踩坑](surf-the-internet/GnomeShellStuffs.md)
 
-[开始使用linux啦](surf-the-internet/StartWithLinux.md)
+
 
 ## Todo:
 - [x] 写一个简单的多平台代理介绍

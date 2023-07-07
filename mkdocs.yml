@@ -89,6 +89,7 @@ nav:
     - 常用命令查漏补缺: notes/14-Sep-22.md
     - linux文件系统与磁盘, 软连接与硬连接: notes/15-Sep-22.md
     - springboot相关复习: notes/27-Feb-23.md
+    - CSAPP review: notes/07-Jul-23.md
   - 上网冲浪:
     - surf-the-internet/index.md
     - 代理，互联网的第一步: surf-the-internet/HowToProxy.md
