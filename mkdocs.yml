@@ -96,3 +96,4 @@ nav:
     - 开始使用linux啦: surf-the-internet/StartWithLinux.md
     - ubuntu美化及踩坑: surf-the-internet/GnomeShellStuffs.md
     - 修改Telegram字体: surf-the-internet/TelegramFont.md
+    - 使用SSH协议链接Github仓库: surf-the-internet/UsingSshWithGit.md
