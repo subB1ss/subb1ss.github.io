@@ -15,12 +15,12 @@ Telegram是我用过体验最好的IM软件，没有之一
 
 Before:
 
-![(Before.png)](../../assets/imgs/Before.png)
+![(Before.png)](../assets/imgs/Before.png)
 
 
 After:
 
-![After](../../assets/imgs/After.png)
+![After](../assets/imgs/After.png)
 
 
 ---

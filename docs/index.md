@@ -24,11 +24,12 @@ hide:
 
 ## Recently
 
+[Arch安装](linux-stuffs/04-Mar-24.md)
+
 [CSAPP review](notes/07-Jul-23.md)
 
 [修改Telegram字体](surf-the-internet/TelegramFont.md)
 
-[ubuntu美化及踩坑](surf-the-internet/GnomeShellStuffs.md)
 
 
 

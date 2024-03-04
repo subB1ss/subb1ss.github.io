@@ -84,10 +84,6 @@ extra_javascript:
 nav:
   - 学习笔记:
     - notes/index.md
-    - linux文件与权限: notes/09-Sep-22.md
-    - linux文件结构与FHS: notes/12-Sep-22.md
-    - 常用命令查漏补缺: notes/14-Sep-22.md
-    - linux文件系统与磁盘, 软连接与硬连接: notes/15-Sep-22.md
     - springboot相关复习: notes/27-Feb-23.md
     - CSAPP review: notes/07-Jul-23.md
   - 上网冲浪:
@@ -97,3 +93,10 @@ nav:
     - ubuntu美化及踩坑: surf-the-internet/GnomeShellStuffs.md
     - 修改Telegram字体: surf-the-internet/TelegramFont.md
     - 使用SSH协议链接Github仓库: surf-the-internet/UsingSshWithGit.md
+  - Linux相关:
+    - linux-stuffs/index.md
+    - linux文件与权限: linux-stuffs/09-Sep-22.md
+    - linux文件结构与FHS: linux-stuffs/12-Sep-22.md
+    - 常用命令查漏补缺: linux-stuffs/14-Sep-22.md
+    - linux文件系统与磁盘, 软连接与硬连接: linux-stuffs/15-Sep-22.md
+    - Arch安装: linux-stuffs/04-Mar-24.md
