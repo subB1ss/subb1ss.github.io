@@ -91,4 +91,8 @@ GIT_SSH_COMMAND='ssh -i private_key_file -o IdentitiesOnly=yes' git clone user@h
 
 然后pull和push的时候命令行设置下git repo的参数就行了
 
-git --config
+```bash
+git config --add --local core.sshCommand 'ssh -i <PATH_TO_SSH_KEY>
+```
+
+这条设置只对当前的本地仓库生效，可以在`./.git/config`找到这一条
