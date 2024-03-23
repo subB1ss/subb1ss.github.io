@@ -102,3 +102,6 @@ nav:
     - linux文件系统与磁盘, 软连接与硬连接: linux-stuffs/15-Sep-22.md
     - Arch安装: linux-stuffs/04-Mar-24.md
     - Docker入门篇读文档: linux-stuffs/Docker/07-Mar-24_Ch1.md
+  - 黑马笔记:
+    - Ch1: dumbass/15-Mar-24.md
+    - Ch2: dumbass/21-Mar-24.md
