@@ -7,13 +7,13 @@ hide:
 # Hello
 这里是我利用githubpages自建的一个小博客
 
+用于随手记下一些生活和学习中的手记
+
 字体是[霞鹜文楷](https://github.com/lxgw/LxgwWenKai)
 
 文章使用Markdown编写，使用Material for MkDocs渲染成网页
 
-> 你可能需要完全访问互联网的能力来达到最好体验
 
-> [指路](surf-the-internet/HowToProxy.md)
 
 ## AboutMe
 重度互联网依赖症患者
@@ -21,20 +21,3 @@ hide:
 兴趣广泛，喜欢一切我觉得好玩的东西
 
 你可以通过Telegram联系我
-
-## Recently
-
-[Docker入门之读文档](linux-stuffs/Docker/07-Mar-24_Ch1.md)
-
-[Arch安装](linux-stuffs/04-Mar-24.md)
-
-[CSAPP review](notes/07-Jul-23.md)
-
-
-
-
-## Todo:
-- [x] 写一个简单的多平台代理介绍
-- ~~[ ] 添加评论功能~~
-- [ ] 写一个QQ转发Telegram的bot
-- [ ] 安利下rime输入法

@@ -103,14 +103,16 @@ nav:
     - Arch安装: linux-stuffs/04-Mar-24.md
     - Docker入门篇读文档: linux-stuffs/Docker/07-Mar-24_Ch1.md
   - 黑马笔记:
-    - Ch1: dumbass/15-Mar-24.md
-    - Ch2: dumbass/21-Mar-24.md
-    - Ch2.1: dumbass/23-Mar-24.md
-    - Ch3: dumbass/25-Mar-24.md
-    - Ch3.1: dumbass/25_2-Mar-24.md
-    - Ch4: dumbass/26-Mar-24.md
-    - Ch5: dumbass/28-Mar-24.md
-    - Ch6: dumbass/29-Mar-24.md
-    - Ch7: dumbass/30-Mar-24.md
-    - Ch8: dumbass/01-Apr-24.md
-    - Ch9: dumbass/02-Apr-24.md
+    - dumbass/index.md
+    - JB_Ch1: dumbass/java_base/15-Mar-24.md
+    - JB_Ch2: dumbass/java_base/21-Mar-24.md
+    - JB_Ch2.1: dumbass/java_base/23-Mar-24.md
+    - JB_Ch3: dumbass/java_base/25-Mar-24.md
+    - JB_Ch3.1: dumbass/java_base/25_2-Mar-24.md
+    - JB_Ch4: dumbass/java_base/26-Mar-24.md
+    - JB_Ch5: dumbass/java_base/28-Mar-24.md
+    - JB_Ch6: dumbass/java_base/29-Mar-24.md
+    - JB_Ch7: dumbass/java_base/30-Mar-24.md
+    - JB_Ch8: dumbass/java_base/01-Apr-24.md
+    - JB_Ch9: dumbass/java_base/02-Apr-24.md
+    - Ep1: dumbass/web/05-Apr-24.md
