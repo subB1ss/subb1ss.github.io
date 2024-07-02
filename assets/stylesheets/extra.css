@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "霞鹜文楷";
+    src: url(../fonts/LXGWWenKaiLite-Regular.ttf);
+    font-style: normal;
+}
+@font-face {
+    font-family: "Consolas";
+    src: url(../fonts/YaHei.Consolas.1.12.ttf);
+    font-style: normal;
+}
+:root {
+    --md-text-font: "霞鹜文楷";
+    --md-code-font: "Consolas"
+}
+.md-footer__inner.md-grid {
+    display: none
+}
