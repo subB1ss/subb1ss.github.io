@@ -1,7 +1,7 @@
 import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
-  url: 'https://valaxy.site/',
+  url: 'https://subb1ss.github.io/',
   lang: 'zh-CN',
   title: '我的文档',
   subtitle: 'Record of my life',
@@ -10,7 +10,7 @@ export default defineSiteConfig({
     avatar: '/avatar.jpeg',
     status: {
       emoji: '🍀',
-      message: 'wish you a good luck~'
+      message: 'Wish you a good luck~'
     }
   },
   description: '用来放一些生活中工作中的随笔.',
@@ -22,14 +22,22 @@ export default defineSiteConfig({
       color: '#6e5494',
     },
     {
-      name: 'Telegram Channel',
+      name: 'Telegram',
       link: 'https://t.me/ra1nma1n',
       icon: 'i-ri-telegram-line',
       color: '#0088CC',
     },
   ],
-
   search: {
     enable: true,
-  }
+  },
+  lastUpdated: true,
+  license: {
+    enabled: false,
+    language: 'en',
+  },
+  frontmatter: {
+    sponsor: false,
+    copyright: false,
+  },
 })

@@ -1,13 +1,12 @@
 ---
+copyright: false
 title: 憧憬成为 web3 高手之：Ethereum 交易与签名
 date: 2024-07-15
 updated: 2024-07-16
 categories: Web3相关
 tags:
   - web3
-  - 笔记
   - ethereum
-top: 1
 ---
 # 交易
 
