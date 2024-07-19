@@ -69,6 +69,24 @@ require(withdraw_amount <= 0.1 ether);
 Mappings can be seen as hash tables which are virtually initialized such that every possible key exists from the start and is mapped to a value whose byte-representation is all zeros. However, it is neither possible to obtain a list of all keys of a mapping, nor a list of all values. Record what you added to the mapping, or use it in a context where this is not needed. Or even better, keep a list, or use a more suitable data type.
 :::
 
+---
+
+整形
+
+支持
+- 比较运算符：`<=`，`<`，`==`，`!=`，`>=`，`>`
+- 位运算符：`&`，`|`，`^`，`~`
+- 位移运算符：`<<`，`>>`
+- 算术运算符：`+`，`-`，`**`……
+
+```solidity
+int8 x
+type(x).max = 127
+```
+
+Solidity 的除法是向 0 进位的，与常规的向负无穷大进位不太一致
+
+
 ### 预定义的全局变量和函数
 
 #### 调用交易/消息上下文
