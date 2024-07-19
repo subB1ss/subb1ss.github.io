@@ -84,7 +84,20 @@ int8 x
 type(x).max = 127
 ```
 
-Solidity 的除法是向 0 进位的，与常规的向负无穷大进位不太一致
+Solidity 的除法是向 0 进位的，与常规的向下进位不太一致
+
+---
+
+函数类型
+
+表示函数的类型，可以复制，可以作为参数可以做返回值，可以在函数中作为变量调用。存在 _内部（internal）_ 和 _外部（external）_ 两种类型。默认是内部类型可以省略，只针对于函数类型，合约中定义的函数，没有默认属性必须指明可见性。
+
+```
+function (<parameter types>) {internal|external} [pure|view|payable] [returns (<return types>)]
+```
+
+返回类型不能为空，如果函数不需要返回，需要删除所有的 `returns (<return types>)` 部分。
+
 
 
 ### 预定义的全局变量和函数
