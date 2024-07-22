@@ -27,6 +27,7 @@ declare module 'vue-router/auto-routes' {
     '/categories/': RouteRecordInfo<'/categories/', '/categories', Record<never, never>, Record<never, never>>,
     '/links/': RouteRecordInfo<'/links/', '/links', Record<never, never>, Record<never, never>>,
     '/page/[page]': RouteRecordInfo<'/page/[page]', '/page/:page', { page: ParamValue<true> }, { page: ParamValue<false> }>,
+    '/posts/java-mapperInterface': RouteRecordInfo<'/posts/java-mapperInterface', '/posts/java-mapperInterface', Record<never, never>, Record<never, never>>,
     '/posts/java-stream-style': RouteRecordInfo<'/posts/java-stream-style', '/posts/java-stream-style', Record<never, never>, Record<never, never>>,
     '/posts/smart-contract': RouteRecordInfo<'/posts/smart-contract', '/posts/smart-contract', Record<never, never>, Record<never, never>>,
     '/posts/transaction': RouteRecordInfo<'/posts/transaction', '/posts/transaction', Record<never, never>, Record<never, never>>,
