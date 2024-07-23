@@ -1,7 +1,8 @@
 ---
-draft: true
+draft: false
 title: Java MapperInterface
 date: 2024-07-22
+categories: Sticker
 tags:
     - Java
     - Spring
@@ -41,6 +42,5 @@ public class ConcreteListenerA extends AbstractListener {
     protected <T> T getSpecificBean(Class<T> beanClass) {
         return beanClass.cast(beanA);
     }
-    // ... 子类逻辑
 }
 ```
