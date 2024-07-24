@@ -12,10 +12,10 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "valaxy": "0.19.1",
-    "valaxy-theme-yun": "0.19.1"
+    "valaxy": "0.19.4",
+    "valaxy-theme-yun": "0.19.4"
   },
   "devDependencies": {
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   }
 }
