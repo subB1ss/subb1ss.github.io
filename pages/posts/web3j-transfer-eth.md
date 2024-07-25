@@ -29,3 +29,29 @@ TransactionReceipt transactionReceipt = Transfer.sendFunds(
 ---
 
 使用 `EIP1559` 规范
+
+```java
+
+Web3j web3 = Web3j.build(new HttpService());
+Credentials credentials = WalletUtils.loadCredentials("password", "/path/to/walletfile");
+TransactionReceipt transactionReceipt = Transfer.sendFundsEIP1559(
+        web3, credentials, 
+        "0x<address>|<ensName>", //toAddress
+        BigDecimal.ONE.valueOf(1), //value
+        Convert.Unit.ETHER, //unit
+        BigInteger.valueOf(8_000_000), gasLimit
+        DefaultGasProvider.GAS_LIMIT, //maxPriorityFeePerGas (max fee per gas transaction willing to give to miners)
+        BigInteger.valueOf(3_100_000_000L) //maxFeePerGas (max fee transaction willing to pay)
+        ).send();
+
+```
+
+---
+
+effectiveGasPrice
+
+```java
+
+transactionReceipt.effectiveGasPrice();
+
+```
