@@ -57,3 +57,18 @@ effectiveGasPrice
 transactionReceipt.effectiveGasPrice();
 
 ```
+
+## Credentials
+
+两种创建方式
+
+### Credentials object
+
+- `Credentials.create(ECKeyPair ecKeyPair)`
+- `Credentials.create(String privateKey, String publicKey)`
+
+### Use WalletUtils
+
+- `WalletUtils.loadCredentials(String password, String source)`
+- `WalletUtils.loadBip39Credentials(String password, String mnemonic)`
+- `WalletUtils.loadJsonCredentials(String password, String contract)`
