@@ -111,4 +111,4 @@ function (<parameter types>) {internal|external} [pure|view|payable] [returns (<
 代表发起消息的地址。如果合约是由 EOA 交易调用的，那么这就是签署交易的地址
 
 ***msg.gas***  
-调用合约消息中留下的 gas 量，
+调用合约消息中留下
