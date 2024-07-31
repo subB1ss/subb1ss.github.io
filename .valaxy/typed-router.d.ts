@@ -31,6 +31,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/java-stream-style': RouteRecordInfo<'/posts/java-stream-style', '/posts/java-stream-style', Record<never, never>, Record<never, never>>,
     '/posts/smart-contract': RouteRecordInfo<'/posts/smart-contract', '/posts/smart-contract', Record<never, never>, Record<never, never>>,
     '/posts/transaction': RouteRecordInfo<'/posts/transaction', '/posts/transaction', Record<never, never>, Record<never, never>>,
+    '/posts/web3j-mnemonic': RouteRecordInfo<'/posts/web3j-mnemonic', '/posts/web3j-mnemonic', Record<never, never>, Record<never, never>>,
     '/posts/web3j-transfer-eth': RouteRecordInfo<'/posts/web3j-transfer-eth', '/posts/web3j-transfer-eth', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
   }

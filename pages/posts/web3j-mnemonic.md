@@ -1,0 +1,93 @@
+---
+draft:
+title: 憧憬称为web3高手之：从助记词到钱包私钥
+date: 2024-07-31
+categories: Web3相关
+tags:
+    - web3
+    - bip-39
+---
+
+# 从助记词密语到钱包地址
+
+现行的钱包地址都由一串助记词派生而来。
+
+`BIP-39` 标准定义了 2048 个助记词，稍后会看到为什么是 2048 个。
+
+创建助记词的第一步是生成 _初始熵_，有许多生成初始熵的方式，比较常见的是使用电脑的随机数生成器。生成的 _初始熵_ 是一串用于加密的 _比特序列（0 或者 1）_ ，通常来说越长的 _初始熵_ 被认为是越安全的，`128 bits` 长被认为是足够的。
+
+_初始熵_ 可以有 128 bits 到 256 bits 的长度，响应的助记词会有 12 到 24 个单词的长度。
+
+## 从初始熵到助记词
+
+假设我们要创建一个 12 单词长的助记词，第一步是生成 128 bits 长的 _初始熵_。
+
+```
+11111011 00010101 11111100 00011110 01000100 00011011 10110100 00110001 01000000 01111010 01010111 11101011 10000111 11111010 00011111 11011110
+```
+
+然后我们取 _初始熵_ 的 `SHA-256` 结果的头 `长度 / 32` 位添加到它后面，在这里的情况是 `0100`，得到一串 `132 bits` 的序列。这被加上的四位称为 _校验和（checksum）_，可以用来验证输入的助记词是否合法。
+
+我们将得到的 `132 bits` 序列以 `11 bits` 宽重组：
+
+```
+11111011000 10101111111 00000111100 10001000001 10111011010
+2008        1407        60          1089        1498
+00011000101 00000001111 01001010111 11101011100 00111111110
+197         15          599         1884        510
+10000111111 10111100100
+1087        1508
+```
+
+每个序列下的值是它们的十进制值，映射至 `BIP-39` 标准定义的 2048 个单词。这个标准定义了一系列不同的词语表，有英语、中文、西语。  
+最终得到的助记词如下：
+
+```
+2008     1407     60       1089     1498     197      15
+wild     quiz     always   market   robust   board    acid    
+599      1884     510      1087     1508
+enough   twist    divert   margin   route
+```
+
+### checksum
+
+通过重复生成校验和的流程我们可以判断助记词序列是否合法
+
+### 通过骰子生成初始熵
+
+如果你不信任计算机的随机数生成器，也可以通过掷骰子来完成，参照 Alex Van de Sande 制造的图表
+
+> [I made this handy image that allows you to see all BIP39 words arranged in a way you can print in an A4, pick them using a few dice by throwing it 11 times (the last word is a checksum).](https://x.com/avsa/status/1131281684635234304?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1131281684635234304%7Ctwgr%5E64a640fd48aab891d79649b91430a0600d85b9ec%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Ftype%3Dtext2Fhtmlkey%3Da19fcc184b9711e1b4764040d3dc5c07schema%3Dtwitterurl%3Dhttps3A%2F%2Ftwitter.com%2Favsa%2Fstatus%2F1131281684635234304image%3Dhttps3A%2F%2Fi.embed.ly%2F1%2Fimage3Furl3Dhttps253A252F252Fpbs.twimg.com252Fmedia252FD7Md5NuWkAUR2Kz.png253Alarge26key3Da19fcc184b9711e1b4764040d3dc5c07)
+
+## 从助记词到种子再到私钥
+
+### BIP-39: 从助记词生成确定性的密钥
+
+为了得到实际的私钥，助记词先要转化为 _种子_，这一过程使用 __Password-Based Key Derivation Function 2__ 简称为 __PBKDF2__。类似 __PBKDF2__ 这样的密钥生成函数行为大多相同，接收一些输入作为参数，返回生成的密钥。只要他们的输入不变，返回的密钥也是不会变的。
+
+__PBKDF2__ 有 5 个输入参数：
+1. 一个伪随机数函数
+2. 密码
+3. 盐
+4. 迭代次数
+5. 密钥长度
+
+最重要的是 _密码_ 和 _盐_，我们使用助记词作为密码，使用“mnemonichunter2”作为盐，生成的 `512 bits` 长种子为：
+
+```
+0x77cdf1d92225adc0e67b1b4f5a31820251d518b3af074df25a07b751947fd07ebd29a4d0e57b84ea9de03a9123e2a6ea1e3ed739d4c562efec21f1bb0a54a879
+```
+
+下一步我们会用这个种子生成 `BIP-32` 主钥
+
+### BIP-32: 分层确定性钱包
+
+这个种子用于生成一条 _分层确定性钱包（Hierarchical Deterministic Wallet）_ 或者称为 _HD钱包_ 的主钥。为此我们使用 `BIP-32` 和 `BIP-44`。  
+前者定义了HD钱包，后者特定了前者的结构
+
+一个HD钱包从它的主钥 `m` 开始。主钥从种子生成，再次使用 __PBKDF2__，不再使用“mnemonic”作为盐，而是使用“Bitcoin seed”。像这样`PBKDF2("0x77cd...a879", "Bitcoin seed")，再次得到一个 512 bits 长的密钥：
+
+```
+0x300b155f751964276c0536230bd9b16fe7a86533c3cbaa7575e8d0431dbedf23f9945bb8b052bd0b0802c10c7c852e7765b69b61ce7233d9fe5a35ab108ca3b6
+```
+
