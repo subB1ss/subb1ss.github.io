@@ -2,7 +2,7 @@
 draft: false
 title: 憧憬成为web3高手之：从助记词到钱包私钥
 date: 2024-07-31
-update: 2024-08-02
+update: 2024-08-03
 categories: Web3相关
 tags:
     - web3
