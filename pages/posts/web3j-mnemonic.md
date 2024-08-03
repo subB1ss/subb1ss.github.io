@@ -7,6 +7,7 @@ categories: Web3相关
 tags:
     - web3
     - bip-39
+    - bip-44
 ---
 
 # 从助记词密语到钱包地址
@@ -131,3 +132,96 @@ $K_i = (I_l + K_{par})\%n$
 上面的方式只适用于我们拥有对私钥的访问权的情况，当我们只有公钥的访问权时，例如使用一个硬件钱包时，派生子钥的操作有些许不同
 
 ${k_i=point(I_l) + K_{par}}$
+
+使用了椭圆曲线点加法
+
+### 拓展子钥序列化
+
+派生子钥可以序列化成 _Base58_ 编码字符串，提高人类可读性。从主钥派生的子私钥序列化后看起来像是这样：
+
+```
+xprv9s21ZrQH143K4YUcKrp6cVxQaX59ZFkN6MFdeZjt8CHVYNs55xxQSvZpHWfojWMv6zgjmzopCyWPSFAnV4RU33J4pwCcnhsB4R4mPEnTsMC
+```
+
+公钥看起来像这样：
+
+```
+xpub661MyMwAqRbcH2Z5RtM6ydu98YudxiUDTaBESx9VgXpURBCDdWGezitJ8ormADG6CsJPs23fLmaeLp8RJgNvFo6YJkGhpXnHusCkRhGZdqr
+```
+
+来看下拓展私钥的组成，在 16 进制下，它看起来是这样的：
+
+```
+0x0488ade4000000000000000000f9945bb8b052bd0b0802c10c7c852e7765b69b61ce7233d9fe5a35ab108ca3b600300b155f751964276c0536230bd9b16fe7a86533c3cbaa7575e8d0431dbedf232204691b
+```
+
+拓展子钥有 82 bytes 长，并且包含以下字段：
+
+- 版本（4 bytes）：不是 `0x0488b21e`（xpub）就是 `0x0488ade4`（xpriv）。因此，_Base58_ 编码密钥总是以 _xpub_ 或者 _xprv_ 开头
+- 深度（1 bytes）：从主钥算起，每个子钥的深度将会加一。主钥的深度是 `0x00`，第一个子钥就是 `0x01`，这个子钥的子钥就是 `0x02`
+- 父钥指纹（4 bytes）：父钥的标识符。因为范例是主钥（没有父钥），指纹永远是 `0x00000000`。对于子钥，这个字段通过将父公钥的 _SHA256_ 哈希计算 _RIPEMD160_ 哈希得到
+- 序号（4 bytes）：因为范例是主钥，所有子钥序号是 0（0x00000000），对于子钥，该字段就是用于派生子钥的数字。例如对于 `m/1`，子钥序号就是 1 （0x00000001）
+- 链码（32 bytes）
+- 公钥或者私钥（33 bytes）：私钥原生是 32 bytes，往前面添加一个 0 字节（0x00）使其达到 33 bytes
+- 验证合（4 bytes）：对其他所有字节进行两次 _SHA256_
+
+再看一个实际的案例：
+
+从主钥派生一条路径为 `m/0/0'` 的子钥，我们得到：
+
+```
+xprv9wpaeBFtdQRvLmeHJW8am7sYUSJJyup2rJwhCzZQG6KZCB5mqWDpSTamzJZAgtAhJVmaoRSMTeRyzmXXt28tvrZQnnr576LpNcDaSjf4fPn
+```
+
+十二进制表示
+
+```
+0488ade4028d71ca56800000007c85166433befdd691914b0eecd68d60eb3824bdb386fb34f15abf72a240ddef00387d4046b9eccba86fb9404e23e0345ae7cd513d8c819d00c3e7f11ee2aa4f98ed30f059
+```
+
+下面是它的所有独立字段，记住子序号是硬子钥，所以序号字段是 $(0+)2^{31}$ 得到 `0x80000000`
+|字段|值|
+|---|---|
+|Version|0x0488ade4|
+|Depth|02|
+|Parent fingerprint|8d71ca56|
+|Index|80000000|
+|Chain code| 7c85166433befdd691914b0eecd68d60eb3824bdb386fb34f15abf72a240ddef|
+|Private key| 00387d4046b9eccba86fb9404e23e0345ae7cd513d8c819d00c3e7f11ee2aa4f98|
+|Checksum| ed30f059|
+
+## 从公钥到地址
+
+这是这个流程的最后一步了，我们对 `m/0/0'`派生子钥进行 _Keccak256_ 哈希，取最后的 20 bytes，并执行 _EIP-55_ 校验和，最终得出的就是钱包地址
+
+> [EIP-55: Mixed-case checksum address encoding](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md)
+
+### BIP-44: Multi-Account Hierarchy for Deterministic Wallets
+
+BIP-44 定义了 BIP-32 和 BIP-32 的引申。是现行被最广泛使用的规范。
+
+BIP-32 并没有定义十分严格的路径层级，BIP-44 基于 BIP-33 的路径定义了 5 个层级
+
+```
+m / purpose' / coin_type' / account' / change / address_index
+```
+
+这也被称为“派生路径”，我们选区特定的路径并从种子派生特殊的地址，以下是两个例子：
+
+- 以太坊“默认”的第一地址的派生路径 `m/44'/60'/0'/0/0`
+- Ledger Live的第三地址的派生路径 `m/44'/60'/2'/0/0`
+
+#### Purpose
+
+由 BIP-43 引入，指明了派生路径使用的什么规范，有些钱包使用类似 `m/44'/60'/0'/0` 的派生路径，这在技术上来说不是一条合法的 BIP-44 的路径，应该使用一个不同的 _purpose_ 
+
+#### Coin type
+
+用于区别不同的币种，以太坊使用 60'，比特币使用 0' 。这些币种定义在 SLIP-44 上。
+
+#### Account 
+
+用于区分用户身份，有些钱包（例如 Ledger Live）使用这个层级替代 address index 来为用户提供更多的隐私保护。
+
+#### Change
+
