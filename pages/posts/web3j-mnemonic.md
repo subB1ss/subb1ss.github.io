@@ -2,7 +2,7 @@
 draft: false
 title: 憧憬成为web3高手之：从助记词到钱包私钥
 date: 2024-07-31
-update: 2024-08-03
+update: 2024-08-06
 categories: Web3相关
 tags:
     - web3
@@ -225,3 +225,33 @@ m / purpose' / coin_type' / account' / change / address_index
 
 #### Change
 
+该字段只有两个值，0 或 1。0 意味着这个地址是用于 “外部链”，1 用于 “内部链”。对于以太坊通常这个值都是 0。
+
+#### Address index
+
+地址序号，大部分钱包用于派生出一个 HD 钱包中的不同地址，MetaMask也是使用这个值。
+
+---
+## java 从助记词密语导入 HD 钱包范例
+
+```java
+
+    /**
+     * 根据助记词生成钱包凭证
+     * @param mnemonic 助记词
+     * @param index 钱包地址总数，生成从 0 至 index 总共 index+1 个
+     * @return Credentials 集合
+     */
+
+  public static List<Credentials> generateWalletFromMnemonic(String mnemonic, int index) {
+    List<Credentials> wallet = new ArrayList<>();
+    byte[] seed = MnemonicUtils.generateSeed(mnemonic, "");
+    Bip32ECKeyPair masterKey = Bip32ECKeyPair.generateKeyPair(seed);
+    for (int i = 0; i <= index; i++) {
+      int[] path = {44 | HARDENED_BIT, 60 | HARDENED_BIT, 0 | HARDENED_BIT, 0, i};
+      wallet.add(Credentials.create(Bip32ECKeyPair.deriveKeyPair(masterKey, path)));
+    }
+    return wallet;
+  }
+
+```
