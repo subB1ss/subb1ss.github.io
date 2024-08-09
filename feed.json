@@ -1,0 +1,86 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "我的文档",
+    "home_page_url": "https://subb1ss.github.io/",
+    "feed_url": "https://subb1ss.github.io/feed.json",
+    "description": "用来放一些生活中工作中的随笔.",
+    "icon": "https://subb1ss.github.io/avatar.jpeg",
+    "author": {
+        "name": "阿套",
+        "url": "https://valaxy.site"
+    },
+    "items": [
+        {
+            "id": "",
+            "content_html": "<h1>使用一个统一的 Interface 来提供 Mapper 实例</h1>\n<p>最近接手公司同事的项目，他习惯在抽离公共逻辑的抽象父类中定义一个抽象的 <code>getMapperInterface</code> 方法，返回一个</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/java-mapperInterface",
+            "title": "Java MapperInterface",
+            "date_modified": "2024-07-22T00:00:00.000Z",
+            "date_published": "2024-08-09T05:54:06.260Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>流处理风格</h1>\n<p>比较新的特性，Java8 加入的，其实也不是很新了，但是感觉实际上还是用得比较少。作为 Java 向面向过程让步的一部分存在，但有些时候我其实觉得流绝对没有那么面向过程。</p>\n<p>一般来</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/java-stream-style",
+            "title": "Java流处理风格编程之 FlatMap 与 Map",
+            "date_modified": "2024-07-20T00:00:00.000Z",
+            "date_published": "2024-08-09T05:54:06.260Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>公司需要大量的测试币，tBNB 水龙头每个钱包地址，每个 IP 地址，每天可以领取 0.3 tBNB。利用代理软件切换 IP 地址，在 metamask 钱包里创建了 31 个子钱包地址。每天领取后</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/web3j-collector",
+            "title": "web3j搜集HD钱包下所有代笔",
+            "date_modified": "2024-02-29T00:00:00.000Z",
+            "date_published": "2024-08-09T05:54:06.260Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>从助记词密语到钱包地址</h1>\n<p>现行的钱包地址都由一串助记词派生而来。</p>\n<p><code>BIP-39</code> 标准定义了 2048 个助记词，稍后会看到为什么是 2048 个。</p>\n<p>创建助记词的第一步是生成 <em>初始熵</em>，</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/web3j-mnemonic",
+            "title": "憧憬成为web3高手之：从助记词到钱包私钥",
+            "date_modified": "2024-07-31T00:00:00.000Z",
+            "date_published": "2024-08-09T05:54:06.260Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>Web3j 向目标地址转账</h1>\n<p>推荐使用 <code>Transfer class</code> 来转账以太，不用自己管理 <code>nonce</code> 并且会帮你拉取结果：</p>\n<pre><code class=\"language-java\">\nWeb3j web3 = Web3j</code></pre>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/web3j-transfer-eth",
+            "title": "web3j之转账",
+            "date_modified": "2024-07-24T00:00:00.000Z",
+            "date_published": "2024-08-09T05:54:06.260Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>交易</h1>\n<p>交易是由<strong>外部账户</strong>发起的<strong>签名</strong>消息。</p>\n<p>是唯一可以触发状态更改或者导致合约在 EVM 执行的东西</p>\n<h2>交易的结构</h2>\n<ul>\n<li>nonce: 由 EOA 发起的序列号，防止消息被重</li>\n</ul>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/transaction",
+            "title": "憧憬成为 web3 高手之：Ethereum 交易与签名",
+            "date_modified": "2024-07-15T00:00:00.000Z",
+            "date_published": "2024-07-16T00:00:00.000Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        }
+    ]
+}

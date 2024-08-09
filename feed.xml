@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>我的文档</title>
+        <link>https://subb1ss.github.io/</link>
+        <description>用来放一些生活中工作中的随笔.</description>
+        <lastBuildDate>Fri, 09 Aug 2024 05:54:53 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>我的文档</title>
+            <url>https://subb1ss.github.io/avatar.jpeg</url>
+            <link>https://subb1ss.github.io/</link>
+        </image>
+        <copyright>CC BY-NC-SA 4.0 2024 © 阿套</copyright>
+        <atom:link href="https://subb1ss.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Java MapperInterface]]></title>
+            <link>https://subb1ss.github.io/posts/java-mapperInterface</link>
+            <guid>https://subb1ss.github.io/posts/java-mapperInterface</guid>
+            <pubDate>Fri, 09 Aug 2024 05:54:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1>使用一个统一的 Interface 来提供 Mapper 实例</h1>
+<p>最近接手公司同事的项目，他习惯在抽离公共逻辑的抽象父类中定义一个抽象的 <code>getMapperInterface</code> 方法，返回一个</p>
+<br/><p>访问 <a href="" target="_blank"></a> 阅读全文。</p>]]></content:encoded>
+            <author>i@valaxy.site (阿套)</author>
+        </item>
+        <item>
+            <title><![CDATA[Java流处理风格编程之 FlatMap 与 Map]]></title>
+            <link>https://subb1ss.github.io/posts/java-stream-style</link>
+            <guid>https://subb1ss.github.io/posts/java-stream-style</guid>
+            <pubDate>Fri, 09 Aug 2024 05:54:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1>流处理风格</h1>
+<p>比较新的特性，Java8 加入的，其实也不是很新了，但是感觉实际上还是用得比较少。作为 Java 向面向过程让步的一部分存在，但有些时候我其实觉得流绝对没有那么面向过程。</p>
+<p>一般来</p>
+<br/><p>访问 <a href="" target="_blank"></a> 阅读全文。</p>]]></content:encoded>
+            <author>i@valaxy.site (阿套)</author>
+        </item>
+        <item>
+            <title><![CDATA[web3j搜集HD钱包下所有代笔]]></title>
+            <link>https://subb1ss.github.io/posts/web3j-collector</link>
+            <guid>https://subb1ss.github.io/posts/web3j-collector</guid>
+            <pubDate>Fri, 09 Aug 2024 05:54:06 GMT</pubDate>
+            <content:encoded><![CDATA[<p>公司需要大量的测试币，tBNB 水龙头每个钱包地址，每个 IP 地址，每天可以领取 0.3 tBNB。利用代理软件切换 IP 地址，在 metamask 钱包里创建了 31 个子钱包地址。每天领取后</p>
+<br/><p>访问 <a href="" target="_blank"></a> 阅读全文。</p>]]></content:encoded>
+            <author>i@valaxy.site (阿套)</author>
+        </item>
+        <item>
+            <title><![CDATA[憧憬成为web3高手之：从助记词到钱包私钥]]></title>
+            <link>https://subb1ss.github.io/posts/web3j-mnemonic</link>
+            <guid>https://subb1ss.github.io/posts/web3j-mnemonic</guid>
+            <pubDate>Fri, 09 Aug 2024 05:54:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1>从助记词密语到钱包地址</h1>
+<p>现行的钱包地址都由一串助记词派生而来。</p>
+<p><code>BIP-39</code> 标准定义了 2048 个助记词，稍后会看到为什么是 2048 个。</p>
+<p>创建助记词的第一步是生成 <em>初始熵</em>，</p>
+<br/><p>访问 <a href="" target="_blank"></a> 阅读全文。</p>]]></content:encoded>
+            <author>i@valaxy.site (阿套)</author>
+        </item>
+        <item>
+            <title><![CDATA[web3j之转账]]></title>
+            <link>https://subb1ss.github.io/posts/web3j-transfer-eth</link>
+            <guid>https://subb1ss.github.io/posts/web3j-transfer-eth</guid>
+            <pubDate>Fri, 09 Aug 2024 05:54:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1>Web3j 向目标地址转账</h1>
+<p>推荐使用 <code>Transfer class</code> 来转账以太，不用自己管理 <code>nonce</code> 并且会帮你拉取结果：</p>
+<pre><code class="language-java">
+Web3j web3 = Web3j</code></pre>
+<br/><p>访问 <a href="" target="_blank"></a> 阅读全文。</p>]]></content:encoded>
+            <author>i@valaxy.site (阿套)</author>
+        </item>
+        <item>
+            <title><![CDATA[憧憬成为 web3 高手之：Ethereum 交易与签名]]></title>
+            <link>https://subb1ss.github.io/posts/transaction</link>
+            <guid>https://subb1ss.github.io/posts/transaction</guid>
+            <pubDate>Tue, 16 Jul 2024 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<h1>交易</h1>
+<p>交易是由<strong>外部账户</strong>发起的<strong>签名</strong>消息。</p>
+<p>是唯一可以触发状态更改或者导致合约在 EVM 执行的东西</p>
+<h2>交易的结构</h2>
+<ul>
+<li>nonce: 由 EOA 发起的序列号，防止消息被重</li>
+</ul>
+<br/><p>访问 <a href="" target="_blank"></a> 阅读全文。</p>]]></content:encoded>
+            <author>i@valaxy.site (阿套)</author>
+        </item>
+    </channel>
+</rss>
