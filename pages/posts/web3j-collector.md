@@ -41,6 +41,7 @@ tags:
         System.out.println("---------------------------------|");
         System.out.println("                                 |");
         System.out.println("                                 |");
+        System.out.println("                                 ⬇️");
         System.out.println(transactionReceipt.getTransactionHash());
       }
 
