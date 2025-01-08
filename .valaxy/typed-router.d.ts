@@ -33,6 +33,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/misc-010625': RouteRecordInfo<'/posts/misc-010625', '/posts/misc-010625', Record<never, never>, Record<never, never>>,
     '/posts/smart-contract': RouteRecordInfo<'/posts/smart-contract', '/posts/smart-contract', Record<never, never>, Record<never, never>>,
     '/posts/transaction': RouteRecordInfo<'/posts/transaction', '/posts/transaction', Record<never, never>, Record<never, never>>,
+    '/posts/tweaking-arch/': RouteRecordInfo<'/posts/tweaking-arch/', '/posts/tweaking-arch', Record<never, never>, Record<never, never>>,
     '/posts/web3j-collector': RouteRecordInfo<'/posts/web3j-collector', '/posts/web3j-collector', Record<never, never>, Record<never, never>>,
     '/posts/web3j-mnemonic': RouteRecordInfo<'/posts/web3j-mnemonic', '/posts/web3j-mnemonic', Record<never, never>, Record<never, never>>,
     '/posts/web3j-transfer-eth': RouteRecordInfo<'/posts/web3j-transfer-eth', '/posts/web3j-transfer-eth', Record<never, never>, Record<never, never>>,
