@@ -2,7 +2,7 @@
 copyright: false
 title: arch 故障排除
 date: 2025-01-12
-updated: 2025-01-15
+updated: 2025-01-21
 categories: Linux
 tags:
   - arch
@@ -95,3 +95,38 @@ Password:
 ```bash
 [root@atodesk ~]# eject /dev/sda 
 ```
+
+## samba 共享
+
+使用 samba client 可以实现类似 ftp 的文件上传下载，但是还有一个办法。
+使用 mount.cifs 可以将 samba 共享目录挂载至本地路径下，示例如下：
+
+```bash
+sudo mount.cifs -o username='username' //serverdomain/shareid/ /mnt/smb
+```
+
+完成后记得 unmount: `sudo unmount /mnt/smb`
+
+## hyprland 下用原生 wayland 协议运行 minecraft
+
+参考 [wiki](https://wiki.archlinux.org/title/Minecraft#Minecraft_does_not_start_on_native_Wayland)  
+首先需要系统级别安装 glfw，我这里选择的是 aur 仓库的 glfw-git，为了能最快获取最新的更新。
+```bash
+[atao@atodesk ~]$ yay -Q glfw
+glfw-git 3.4.r23.ge7ea71be-1
+```
+然后接着是去 PrismLauncher 去勾选启用系统全局的 glfw，但是这样我运行开不起来的，会报错。遂想起之前看到别人fork的一个 [gflw](https://github.com/BoyOrigin/glfw-wayland) 仓库，也是为了让 mc 运行在原生 wayland 下。  
+> To use the patched GLFW library with Nvidia GPUs the `__GL_THREADED_OPTIMIZATIONS` environment variable needs to be set to `0`.  
+
+在 PrismLauncher 添加这条环境变量后，成功启动。wiki 上和这个仓库上都说过这个方法只能运行在 LWJGL3 上，刚好高版本 java 的 gtnh 就是使用的 LWJGL3，:)  
+wiki 上有提到，可能会有开启菜单时光标被归中的 bug，可以通过安装 `glfw-wayland-minecraft-cursorfix` 这个包来解决，但我还没遇到。
+
+### wayland 下的 mc 体验
+
+还没怎么玩，但是第一次运行时遇到了系统级别的 laggy，但是之后再没有出现过。  
+性能释放上，和 xwayland 相比，其实可能帧数还低了点，但是 xwayland 下窗口缩放会很奇怪，不丝滑。而且偶尔还会有画面闪烁等问题。
+
+## kitty ssh 问题
+
+使用 kitty ssh 连接一个服务器可能会因为配置文件缺失出现一系列的问题。可以通过使用 `kitten ssh` 替代 `ssh`，这会复制当前的配置文件至远端的会话上。实际上也不确定是只作用于本次会话还是登录用户，而且如果 su root 会失效，那这样看起来应该是复制给了用户吧。  
+另外一个方法是直接在远端服务器上下载 `kitty-terminfo` 简单粗暴。
