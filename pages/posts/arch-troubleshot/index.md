@@ -2,7 +2,7 @@
 copyright: false
 title: arch 故障排除
 date: 2025-01-12
-updated: 2025-01-21
+updated: 2025-01-22
 categories: Linux
 tags:
   - arch
@@ -130,3 +130,14 @@ wiki 上有提到，可能会有开启菜单时光标被归中的 bug，可以�
 
 使用 kitty ssh 连接一个服务器可能会因为配置文件缺失出现一系列的问题。可以通过使用 `kitten ssh` 替代 `ssh`，这会复制当前的配置文件至远端的会话上。实际上也不确定是只作用于本次会话还是登录用户，而且如果 su root 会失效，那这样看起来应该是复制给了用户吧。  
 另外一个方法是直接在远端服务器上下载 `kitty-terminfo` 简单粗暴。
+
+## teamspeak 服务器
+
+自建了一个 teamspeak 服务器，discord 不方便，其他语音软件不一定有 linux 发行版。
+和 mc 服务器一样是使用的 openfrp 隧道，隧道是免费的，每天签到可以领流量。
+
+没啥特别值得讲的，虽然折腾了半天，但是其实是节点的问题。  
+有一点就是，ts3client 不知道为啥，不能在原生 wayland 下运行，走的是 xwayland。然后 fcitx5 不知道为什么在 ts3 里运行不了。去翻文档配置了也不行，ts3 是用的 qt5 来着。想着看看能不能运行在 wayland 下，结果也不行，搜也不太能搜到结果。估计是 ts 自己的问题。  
+
+主要是需求输入中文来配置频道这些，只能换个思路去整了个 [tsmanager](https://www.ts3.app/)，一个 web serverquery client。需要 serveradmin 的密码，这个密码我看 ts-server 自己的日志是没看到有打印的。搜了一圈，说是这个只会在初次运行时直接打印一次至 StandardOutput，不会记录至日志里面。于是乎又去修改了 teamspeak3-server.service 文件，重定向标准输出至文件，遂得到密码。  
+然而我今天发现用 journalctl 可以看到这个输出，令人感叹。
