@@ -32,6 +32,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/GTNH-list': RouteRecordInfo<'/posts/GTNH-list', '/posts/GTNH-list', Record<never, never>, Record<never, never>>,
     '/posts/java-mapperInterface': RouteRecordInfo<'/posts/java-mapperInterface', '/posts/java-mapperInterface', Record<never, never>, Record<never, never>>,
     '/posts/java-stream-style': RouteRecordInfo<'/posts/java-stream-style', '/posts/java-stream-style', Record<never, never>, Record<never, never>>,
+    '/posts/message-queue-kafka/': RouteRecordInfo<'/posts/message-queue-kafka/', '/posts/message-queue-kafka', Record<never, never>, Record<never, never>>,
     '/posts/misc-010625': RouteRecordInfo<'/posts/misc-010625', '/posts/misc-010625', Record<never, never>, Record<never, never>>,
     '/posts/smart-contract': RouteRecordInfo<'/posts/smart-contract', '/posts/smart-contract', Record<never, never>, Record<never, never>>,
     '/posts/transaction': RouteRecordInfo<'/posts/transaction', '/posts/transaction', Record<never, never>, Record<never, never>>,
