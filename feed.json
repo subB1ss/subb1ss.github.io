@@ -1,0 +1,146 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "我的文档",
+    "home_page_url": "https://subb1ss.github.io/",
+    "feed_url": "https://subb1ss.github.io/feed.json",
+    "description": "用来放一些生活中工作中的随笔.",
+    "icon": "https://subb1ss.github.io/avatar.jpeg",
+    "author": {
+        "name": "阿套",
+        "url": "https://valaxy.site"
+    },
+    "items": [
+        {
+            "id": "",
+            "content_html": "<p>公司需要大量的测试币，tBNB 水龙头每个钱包地址，每个 IP 地址，每天可以领取 0.3 tBNB。利用代理软件切换 IP 地址，在 metamask 钱包里创建了 31 个子钱包地址。每天领取后</p>\n<br/><p>访问 <a href=\"https://subb1ss.github.io/posts/web3j-collector\" target=\"_blank\">https://subb1ss.github.io/posts/web3j-collector</a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/web3j-collector",
+            "title": "web3j搜集HD钱包下所有代币",
+            "date_modified": "2024-02-29T00:00:00.000Z",
+            "date_published": "2025-04-25T17:59:09.527Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>从助记词密语到钱包地址</h1>\n<p>现行的钱包地址都由一串助记词派生而来。</p>\n<p><code>BIP-39</code> 标准定义了 2048 个助记词，稍后会看到为什么是 2048 个。</p>\n<p>创建助记词的第一步是生成 <em>初始熵</em>，</p>\n<br/><p>访问 <a href=\"https://subb1ss.github.io/posts/web3j-mnemonic\" target=\"_blank\">https://subb1ss.github.io/posts/web3j-mnemonic</a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/web3j-mnemonic",
+            "title": "憧憬成为web3高手之：从助记词到钱包私钥",
+            "date_modified": "2024-07-31T00:00:00.000Z",
+            "date_published": "2025-04-25T17:59:09.527Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>Web3j 向目标地址转账</h1>\n<p>推荐使用 <code>Transfer class</code> 来转账以太，不用自己管理 <code>nonce</code> 并且会帮你拉取结果：</p>\n<pre><code class=\"language-java\">\nWeb3j web3 = Web3j</code></pre>\n<br/><p>访问 <a href=\"https://subb1ss.github.io/posts/web3j-transfer-eth\" target=\"_blank\">https://subb1ss.github.io/posts/web3j-transfer-eth</a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/web3j-transfer-eth",
+            "title": "web3j之转账",
+            "date_modified": "2024-07-24T00:00:00.000Z",
+            "date_published": "2025-04-25T17:59:09.527Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>杂记——二五年一月</h1>\n<p>堂堂复活！倒也谈不上吧。<br>\n确实是挺长一段时间没写博客了，之前也说过，博客都是上班摸鱼的时候写的，后面工作忙了起来，没啥时间写了。<br>\n不过现在我已经离职了，还没找到新的</p>\n<br/><p>访问 <a href=\"https://subb1ss.github.io/posts/misc-010625\" target=\"_blank\">https://subb1ss.github.io/posts/misc-010625</a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/misc-010625",
+            "title": "杂记-二五年一月",
+            "date_modified": "2025-01-06T00:00:00.000Z",
+            "date_published": "2025-04-25T17:59:09.518Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>开始</h1>\n<h2>介绍</h2>\n<h3>什么是事件流？</h3>\n<p>事件流是数字版的人体中枢神经。是从事件源，例如数据库、传感器、移动设备、云服务、应用程序等采集即时数据的一种实现方式。<br>\n并且可以存储这些事件流以</p>\n<br/><p>访问 <a href=\"https://subb1ss.github.io/posts/message-queue-kafka/index\" target=\"_blank\">https://subb1ss.github.io/posts/message-queue-kafka/index</a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/message-queue-kafka/index",
+            "title": "消息队列与卡夫卡-阅读文档(on going)",
+            "date_modified": "2025-04-24T00:00:00.000Z",
+            "date_published": "2025-04-25T17:59:09.518Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>开个待做清单，记录下开荒进程，删除线代表移除</p>\n<h2>Fri-Aug-30</h2>\n<ul>\n<li>[x] 四联焦炉</li>\n<li>[x] 青铜工具套，匠魂工具</li>\n<li>[x] 焦黑冶炼炉</li>\n<li>[x] 牛圈 <s>，羊圈</s></li>\n<li>[</li>\n</ul>\n<br/><p>访问 <a href=\"https://subb1ss.github.io/posts/GTNH-list\" target=\"_blank\">https://subb1ss.github.io/posts/GTNH-list</a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/GTNH-list",
+            "title": "GTNH 任务列表",
+            "date_modified": "2024-08-30T00:00:00.000Z",
+            "date_published": "2025-04-25T17:59:09.514Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>使用一个统一的 Interface 来提供 Mapper 实例</h1>\n<p>最近接手公司同事的项目，他习惯在抽离公共逻辑的抽象父类中定义一个抽象的 <code>getMapperInterface</code> 方法，返回一个</p>\n<br/><p>访问 <a href=\"https://subb1ss.github.io/posts/java-mapperInterface\" target=\"_blank\">https://subb1ss.github.io/posts/java-mapperInterface</a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/java-mapperInterface",
+            "title": "Java MapperInterface",
+            "date_modified": "2024-07-22T00:00:00.000Z",
+            "date_published": "2025-04-25T17:59:09.514Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>流处理风格</h1>\n<p>比较新的特性，Java8 加入的，其实也不是很新了，但是感觉实际上还是用得比较少。作为 Java 向面向过程让步的一部分存在，但有些时候我其实觉得流绝对没有那么面向过程。</p>\n<p>一般来</p>\n<br/><p>访问 <a href=\"https://subb1ss.github.io/posts/java-stream-style\" target=\"_blank\">https://subb1ss.github.io/posts/java-stream-style</a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/java-stream-style",
+            "title": "Java流处理风格编程之 FlatMap 与 Map",
+            "date_modified": "2024-07-20T00:00:00.000Z",
+            "date_published": "2025-04-25T17:59:09.514Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>arch 故障排除</h1>\n<p>准确来说是 arch + hyprland 故障排除，长期更新</p>\n<h2>kitty 粘贴问题</h2>\n<p>我使用的 terminal emulator 是 kitty，使用的时候发现</p>\n<br/><p>访问 <a href=\"https://subb1ss.github.io/posts/arch-troubleshot/index\" target=\"_blank\">https://subb1ss.github.io/posts/arch-troubleshot/index</a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/arch-troubleshot/index",
+            "title": "arch 故障排除",
+            "date_modified": "2025-01-12T00:00:00.000Z",
+            "date_published": "2025-01-22T00:00:00.000Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>开个文章记录下折腾arch的过程，本文长期更新。<br>\n遇到的一些重大问题会单独写一篇，这篇更偏向记录。</p>\n<h2>显卡驱动方面</h2>\n<p>我用的 Nvidia 显卡，以 linux 平台兼容性差而出名。</p>\n<br/><p>访问 <a href=\"https://subb1ss.github.io/posts/tweaking-arch/index\" target=\"_blank\">https://subb1ss.github.io/posts/tweaking-arch/index</a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/tweaking-arch/index",
+            "title": "折腾arch",
+            "date_modified": "2025-01-08T00:00:00.000Z",
+            "date_published": "2025-01-08T00:00:00.000Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h1>交易</h1>\n<p>交易是由<strong>外部账户</strong>发起的<strong>签名</strong>消息。</p>\n<p>是唯一可以触发状态更改或者导致合约在 EVM 执行的东西</p>\n<h2>交易的结构</h2>\n<ul>\n<li>nonce: 由 EOA 发起的序列号，防止消息被重</li>\n</ul>\n<br/><p>访问 <a href=\"https://subb1ss.github.io/posts/transaction\" target=\"_blank\">https://subb1ss.github.io/posts/transaction</a> 阅读全文。</p>",
+            "url": "https://subb1ss.github.io/posts/transaction",
+            "title": "憧憬成为 web3 高手之：Ethereum 交易与签名",
+            "date_modified": "2024-07-15T00:00:00.000Z",
+            "date_published": "2024-07-16T00:00:00.000Z",
+            "author": {
+                "name": "阿套",
+                "url": "https://valaxy.site"
+            }
+        }
+    ]
+}
