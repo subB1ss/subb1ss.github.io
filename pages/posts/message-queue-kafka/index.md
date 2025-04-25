@@ -66,3 +66,58 @@ Kafka 为 Java 和 Scala 提供了五个核心 API：
 - Consumer API：订阅（读）并处理一个或多个主题中的事件流
 - Kafka Streams API：用于实现流处理应用和微服务。它提供了更高层次的功能来处理事件流，包括转换、带状态的操作（如聚合和连接）、窗口操作、基于事件时间的处理等。输入数据从一个或多个主题中读取，生成的输出则写入一个或多个主题，从而实现对输入流到输出流的有效转换
 - Kafka Connect API：构建连接器
+
+## 用例
+
+### 消息队列
+
+### 网站活动跟踪
+
+### 指标监控
+
+### 日志聚合
+很多人使用 Kafka 来替代传统的日志聚合方案。传统的日志聚合通常是将服务器上的物理日志文件收集起来，集中存储到某个位置（如文件服务器或 HDFS）以便处理。而 Kafka 则抽象掉了文件的细节，以更简洁的方式将日志或事件数据表示为消息流。这不仅实现了更低延迟的处理方式，还更方便支持多个数据源和分布式的数据消费。与 Scribe 或 Flume 等以日志为中心的系统相比，Kafka 拥有同样优秀的性能、更强的持久性保障（得益于副本机制），以及更低的端到端延迟。
+
+### 流式处理
+
+### 事件溯源 
+事件溯源是一种应用程序设计风格，它将状态的每一次变化都记录为按时间顺序排列的一系列事件。Kafka 支持存储超大规模的日志数据，非常适合作为这种风格应用的后端。
+
+### 日志提交
+Kafka 可以作为分布式系统的一种外部提交日志。日志用于在节点之间复制数据，并作为故障节点重新同步数据的一种机制。Kafka 的日志压缩^[log compaction]功能很好地支持了这种用法。在这种场景下，Kafka 的作用类似于 Apache BookKeeper 项目。
+
+## 快速开始
+
+### STEP 1: GET KAFKA
+
+### STEP 2: START THE KAFKA ENVIRONMENT
+
+**使用下载文件**
+
+**使用 docker 镜像**：  
+获取 docker 镜像
+```sh
+$ docker pull apache/kafka:4.0.0
+```
+启动 kafka 容器  
+```sh
+$ docker run -p 9092:9092 apache/kafka:4.0.0
+```
+或者使用基于 GraalVM Native^[GraalVM 提供了一种功能叫做 Native Image，它可以把 Java（或其他 JVM 语言）代码 AOT（Ahead-Of-Time）编译 成一个 不依赖 JVM 的本地可执行文件（native executable），类似于 C/C++ 编译后的程序。] 的
+```sh
+$ docker pull apache/kafka-native:4.0.0
+$ docker run -p 9092:9092 apache/kafka-native:4.0.0
+```
+
+### STEP 3: CREATE A TOPIC TO STORE YOUR EVENTS
+```sh
+$ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+#	--create			Create a new topic
+#	--topic				<String: topic>	
+#	--bootstrap-server 	<String: server to connect to>
+$ bin/kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
+Topic: quickstart-events	TopicId: 00a45VDfTyyFNadsmeZCQg	PartitionCount: 1	ReplicationFactor: 1	Configs: segment.bytes=1073741824
+	Topic: quickstart-events	Partition: 0	Leader: 1	Replicas: 1	Isr: 1	Elr: 	LastKnownElr: 
+```
+
+### SETP 4: WRITE SOME EVENTS INTO THE TOPIC
