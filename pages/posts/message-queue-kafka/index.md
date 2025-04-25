@@ -121,3 +121,87 @@ Topic: quickstart-events	TopicId: 00a45VDfTyyFNadsmeZCQg	PartitionCount: 1	Repli
 ```
 
 ### SETP 4: WRITE SOME EVENTS INTO THE TOPIC
+Kafka 客户端通过网络向 kafka brokers 交流来读写事件。一旦接受，brokers 将按照你需求的时长持续化并容错地方式存储事件，甚至是永久。  
+```sh
+$ ./kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+>This is my first event
+>This is my second event
+```
+
+### STEP 5: READ THE EVNETS
+```sh
+04007a697835:/opt/kafka/bin$ ./kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+This is my first event
+This is my second event
+```
+`Ctrl-C` 来停止 consumer 客户端
+
+### STEP 6: IMPORT/EXPORT YOUR DATA AS STREAMS OF EVENTS WITH KAFKA CONNECT
+Kafka Connet 允许你持续性地从外部系统中提取数据，反之亦然^[vice versa]。  
+它是一个可扩展的工具，用于运行连接器，这些连接器实现了与外部系统交互的自定义逻辑。因此，将现有系统与 Kafka 集成变得非常简单。为了进一步简化这个过程，Kafka 社区还提供了数百个现成可用的连接器。
+
+在这一节我们使用简单连接器来从文件中向 Kafka topic 导入数据，并将数据从 Kafka topic 中导回文件。
+
+基于快速上手的目标，这里的配置文件将使用相对路径并且认为连接器的包是一个 [uber jar](https://stackoverflow.com/questions/11947037/what-is-an-uber-jar-file)。然而，并不应该在生产环境中使用相对路径，使用绝对路径总是更好的。
+
+```sh
+$ echo "plugin.path=libs/connect-file-4.0.0.jar" >> config/connect-standalone.properties
+```
+
+然后，准备一些测试文件
+
+```sh
+$ echo -e "foo\nbar" > test.txt
+```
+
+继续，我们将以 *standalone* 模式启用两个连接器，这意味着它们将在运行在一个本地的专用进程中。 
+
+我们提供三个配置文件作为参数  
+- 第一个永远是 Kafka Connect 的配置文件，包含了一些通用配置例如需要连接的 Kafka brokers 和数据的序列化格式。  
+- 剩下的两个配置文件每个都特定了一个需要创建的连接器，这些文件中包含了一个独特的连接器名，需要实例化的连接器类，以及一些其他被连接器需要的配置。
+
+```sh
+$ bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
+```
+
+
+::: details connect-file-source.properties
+```properties
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name=local-file-source
+connector.class=FileStreamSource
+tasks.max=1
+file=test.txt
+topic=connect-test
+```
+:::
+
+::: details console-consumer
+```sh
+04007a697835:/opt/kafka$ bin/kafka-console-consumer.sh --topic connect-test --from-beginning --bootstrap-server localhost:9092
+{"schema":{"type":"string","optional":false},"payload":"foo"}
+{"schema":{"type":"string","optional":false},"payload":"bar"}
+```
+:::
+
+这些卡夫卡自带的范例配置文件，默认使用本地集群配置。先前启动的两个连接器，一个是源连接器它从输入文件中逐行读取并逐个发布至 Kafka topic；第二个是下沉连接器从 Kafka topic 中读取信息并将它们逐行写入文件。
+
+```sh
+04007a697835:/opt/kafka$ cat test.sink.txt 
+foo
+bar
+```
