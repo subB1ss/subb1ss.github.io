@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>我的文档</title><description>用来放一些生活中工作中的随笔.</description><link>https://subb1ss.github.io/</link><lastBuildDate>Fri, 27 Jun 2025 03:23:37 GMT</lastBuildDate><docs>https://www.rssboard.org/rss-specification</docs><generator>ZFeed 0.2.3 (https://github.com/KazariEX/zfeed)</generator><copyright>CC BY-NC-SA 4.0 2025 © 阿套</copyright><image><url>https://subb1ss.github.io/avatar.jpeg</url><title>我的文档</title><link>https://subb1ss.github.io/</link></image><atom:link rel="self" href="https://subb1ss.github.io/feed.xml" type="application/rss+xml" /><item><title>web3j搜集HD钱包下所有代币</title><guid isPermaLink="false">https://subb1ss.github.io/posts/web3j-collector</guid><link>https://subb1ss.github.io/posts/web3j-collector</link><pubDate>Fri, 27 Jun 2025 03:22:35 GMT</pubDate><content:encoded><![CDATA[<p>公司需要大量的测试币，tBNB 水龙头每个钱包地址，每个 IP 地址，每天可以领取 0.3 tBNB。利用代理软件切换 IP 地址，在 metamask 钱包里创建了 31 个子钱包地址。每天领取后</p>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/web3j-collector" target="_blank">https://subb1ss.github.io/posts/web3j-collector</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item><item><title>憧憬成为web3高手之：从助记词到钱包私钥</title><guid isPermaLink="false">https://subb1ss.github.io/posts/web3j-mnemonic</guid><link>https://subb1ss.github.io/posts/web3j-mnemonic</link><pubDate>Fri, 27 Jun 2025 03:22:35 GMT</pubDate><content:encoded><![CDATA[<h1>从助记词密语到钱包地址</h1>
+<p>现行的钱包地址都由一串助记词派生而来。</p>
+<p><code>BIP-39</code> 标准定义了 2048 个助记词，稍后会看到为什么是 2048 个。</p>
+<p>创建助记词的第一步是生成 <em>初始熵</em>，</p>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/web3j-mnemonic" target="_blank">https://subb1ss.github.io/posts/web3j-mnemonic</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item><item><title>web3j之转账</title><guid isPermaLink="false">https://subb1ss.github.io/posts/web3j-transfer-eth</guid><link>https://subb1ss.github.io/posts/web3j-transfer-eth</link><pubDate>Fri, 27 Jun 2025 03:22:35 GMT</pubDate><content:encoded><![CDATA[<h1>Web3j 向目标地址转账</h1>
+<p>推荐使用 <code>Transfer class</code> 来转账以太，不用自己管理 <code>nonce</code> 并且会帮你拉取结果：</p>
+<pre><code class="language-java">
+Web3j web3 = Web3j</code></pre>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/web3j-transfer-eth" target="_blank">https://subb1ss.github.io/posts/web3j-transfer-eth</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item><item><title>杂记-二五年一月</title><guid isPermaLink="false">https://subb1ss.github.io/posts/misc-010625</guid><link>https://subb1ss.github.io/posts/misc-010625</link><pubDate>Fri, 27 Jun 2025 03:22:35 GMT</pubDate><content:encoded><![CDATA[<h1>杂记——二五年一月</h1>
+<p>堂堂复活！倒也谈不上吧。<br>
+确实是挺长一段时间没写博客了，之前也说过，博客都是上班摸鱼的时候写的，后面工作忙了起来，没啥时间写了。<br>
+不过现在我已经离职了，还没找到新的</p>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/misc-010625" target="_blank">https://subb1ss.github.io/posts/misc-010625</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item><item><title>消息队列与卡夫卡-阅读文档(on going)</title><guid isPermaLink="false">https://subb1ss.github.io/posts/message-queue-kafka/index</guid><link>https://subb1ss.github.io/posts/message-queue-kafka/index</link><pubDate>Fri, 27 Jun 2025 03:22:35 GMT</pubDate><content:encoded><![CDATA[<h1>开始</h1>
+<h2>介绍</h2>
+<h3>什么是事件流？</h3>
+<p>事件流是数字版的人体中枢神经。是从事件源，例如数据库、传感器、移动设备、云服务、应用程序等采集即时数据的一种实现方式。<br>
+并且可以存储这些事件流以</p>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/message-queue-kafka/index" target="_blank">https://subb1ss.github.io/posts/message-queue-kafka/index</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item><item><title>GTNH 任务列表</title><guid isPermaLink="false">https://subb1ss.github.io/posts/GTNH-list</guid><link>https://subb1ss.github.io/posts/GTNH-list</link><pubDate>Fri, 27 Jun 2025 03:22:35 GMT</pubDate><content:encoded><![CDATA[<p>开个待做清单，记录下开荒进程，删除线代表移除</p>
+<h2>Fri-Aug-30</h2>
+<ul>
+<li>[x] 四联焦炉</li>
+<li>[x] 青铜工具套，匠魂工具</li>
+<li>[x] 焦黑冶炼炉</li>
+<li>[x] 牛圈 <s>，羊圈</s></li>
+<li>[</li>
+</ul>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/GTNH-list" target="_blank">https://subb1ss.github.io/posts/GTNH-list</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item><item><title>Java MapperInterface</title><guid isPermaLink="false">https://subb1ss.github.io/posts/java-mapperInterface</guid><link>https://subb1ss.github.io/posts/java-mapperInterface</link><pubDate>Fri, 27 Jun 2025 03:22:35 GMT</pubDate><content:encoded><![CDATA[<h1>使用一个统一的 Interface 来提供 Mapper 实例</h1>
+<p>最近接手公司同事的项目，他习惯在抽离公共逻辑的抽象父类中定义一个抽象的 <code>getMapperInterface</code> 方法，返回一个</p>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/java-mapperInterface" target="_blank">https://subb1ss.github.io/posts/java-mapperInterface</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item><item><title>Java流处理风格编程之 FlatMap 与 Map</title><guid isPermaLink="false">https://subb1ss.github.io/posts/java-stream-style</guid><link>https://subb1ss.github.io/posts/java-stream-style</link><pubDate>Fri, 27 Jun 2025 03:22:35 GMT</pubDate><content:encoded><![CDATA[<h1>流处理风格</h1>
+<p>比较新的特性，Java8 加入的，其实也不是很新了，但是感觉实际上还是用得比较少。作为 Java 向面向过程让步的一部分存在，但有些时候我其实觉得流绝对没有那么面向过程。</p>
+<p>一般来</p>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/java-stream-style" target="_blank">https://subb1ss.github.io/posts/java-stream-style</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item><item><title>记录下每天喝的咖啡</title><guid isPermaLink="false">https://subb1ss.github.io/posts/kofi</guid><link>https://subb1ss.github.io/posts/kofi</link><pubDate>Wed, 25 Jun 2025 00:00:00 GMT</pubDate><content:encoded><![CDATA[<h1>整了点挂耳，记录下</h1>
+<p>冲法不注明都是90°C水冲150ml</p>
+<h2>June 25 哥伦比亚🇨🇴 苏帕摩 sup</h2>
+<p>中高酸，微苦，柔润<br>
+有强烈的烤熟的柑橘香味<br>
+4.5/5</p>
+<h2></h2>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/kofi" target="_blank">https://subb1ss.github.io/posts/kofi</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item><item><title>arch 故障排除</title><guid isPermaLink="false">https://subb1ss.github.io/posts/arch-troubleshot/index</guid><link>https://subb1ss.github.io/posts/arch-troubleshot/index</link><pubDate>Wed, 22 Jan 2025 00:00:00 GMT</pubDate><content:encoded><![CDATA[<h1>arch 故障排除</h1>
+<p>准确来说是 arch + hyprland 故障排除，长期更新</p>
+<h2>kitty 粘贴问题</h2>
+<p>我使用的 terminal emulator 是 kitty，使用的时候发现</p>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/arch-troubleshot/index" target="_blank">https://subb1ss.github.io/posts/arch-troubleshot/index</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item><item><title>折腾arch</title><guid isPermaLink="false">https://subb1ss.github.io/posts/tweaking-arch/index</guid><link>https://subb1ss.github.io/posts/tweaking-arch/index</link><pubDate>Wed, 08 Jan 2025 00:00:00 GMT</pubDate><content:encoded><![CDATA[<p>开个文章记录下折腾arch的过程，本文长期更新。<br>
+遇到的一些重大问题会单独写一篇，这篇更偏向记录。</p>
+<h2>显卡驱动方面</h2>
+<p>我用的 Nvidia 显卡，以 linux 平台兼容性差而出名。</p>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/tweaking-arch/index" target="_blank">https://subb1ss.github.io/posts/tweaking-arch/index</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item><item><title>憧憬成为 web3 高手之：Ethereum 交易与签名</title><guid isPermaLink="false">https://subb1ss.github.io/posts/transaction</guid><link>https://subb1ss.github.io/posts/transaction</link><pubDate>Tue, 16 Jul 2024 00:00:00 GMT</pubDate><content:encoded><![CDATA[<h1>交易</h1>
+<p>交易是由<strong>外部账户</strong>发起的<strong>签名</strong>消息。</p>
+<p>是唯一可以触发状态更改或者导致合约在 EVM 执行的东西</p>
+<h2>交易的结构</h2>
+<ul>
+<li>nonce: 由 EOA 发起的序列号，防止消息被重</li>
+</ul>
+<br/><p>访问 <a href="https://subb1ss.github.io/posts/transaction" target="_blank">https://subb1ss.github.io/posts/transaction</a> 阅读全文。</p>]]></content:encoded><author>i@valaxy.site (阿套)</author></item></channel></rss>
